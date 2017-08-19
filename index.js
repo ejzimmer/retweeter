@@ -7,8 +7,6 @@ const client = new Twit({
   access_token_secret: process.env.access_token_secret,
 });
 
-console.log(process.env.consumer_key);
-
 const buzzconfio = '2711421331';
 const stream = client.stream(`statuses/filter`, { follow: buzzconfio });
 stream.on('tweet', function (tweet) {
